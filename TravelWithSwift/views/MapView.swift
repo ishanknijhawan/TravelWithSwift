@@ -17,11 +17,13 @@ struct MapView: View {
             annotationItems: locations.places) {
             location in
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude, longitude: location.longitude)) {
-                Image(location.country)
-                    .resizable()
-                    .cornerRadius(4)
-                    .shadow(radius: 5)
-                    .frame(width: 80, height: 40)
+                NavigationLink(destination: ContentView(location: location)) {
+                    Image(location.country)
+                        .resizable()
+                        .cornerRadius(4)
+                        .shadow(radius: 5)
+                        .frame(width: 80, height: 40)
+                }
             }
         }
             .navigationTitle("Locations")

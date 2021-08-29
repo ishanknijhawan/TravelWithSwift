@@ -30,7 +30,7 @@ struct TravelWithSwiftApp: App {
                     Image(systemName: "map")
                 }
                 NavigationView {
-                    MapView()
+                    TipsView()
                 }
                 .tabItem {
                     Text("Tips")
